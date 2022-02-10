@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style navbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome cnd link  -->
+    <script src="https://kit.fontawesome.com/fb7770f64c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="container"></div>
+        </nav>
+    </header>
+    <div class="side-nav-close">
+        <div class="container-close">
+            <ul class="ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">AboutUs</a></li>
+                <li><a href="#">ContactUs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="overlay-display-close"></div>
+    <div class="icon-nav icon-nav-open">
+        <i class="fa-solid fa-house-chimney"></i>
+        <i class="fa-solid fa-server"></i>
+        <i class="fa-solid fa-arrow-down-short-wide"></i>
+        <i class="fa-solid fa-file-contract"></i>
+        <i class="fa-solid fa-address-book"></i>
+    </div>
+</body>
+<script>
+    let toggle = document.querySelector(".toggle");
+    let side_bar = document.querySelector(".side-nav-close");
+    let overlay = document.querySelector(".overlay-display-close");
+    let side = document.querySelector(".container-close");
+    let icon_nav_open = document.querySelector(".icon-nav-open");
+    toggle.addEventListener("click", () => {
+        if (side_bar.classList.contains("side-nav-close")) {
+            side_bar.classList.remove("side-nav-close");
+            side_bar.classList.add("side-nav-open");
+            overlay.classList.remove("overlay-display-close");
+            overlay.classList.add("overlay-display-open");
+            side.classList.remove("container-close");
+            side.classList.add("container-open");
+            icon_nav_open.classList.remove("icon-nav-open");
+            icon_nav_open.classList.add("icon-nav-close");
+        } else {
+            side_bar.classList.remove("side-nav-open");
+            side_bar.classList.add("side-nav-close");
+            overlay.classList.remove("overlay-display-open");
+            overlay.classList.add("overlay-display-close");
+            side.classList.add("container-close");
+            side.classList.remove("container-open");
+            icon_nav_open.classList.add("icon-nav-open");
+            icon_nav_open.classList.remove("icon-nav-close");
+        }
+    });
+
+    overlay.addEventListener("click", () => {
+        if (side_bar.classList.contains("side-nav-close")) {
+            side_bar.classList.remove("side-nav-close");
+            side_bar.classList.add("side-nav-open");
+            overlay.classList.remove("overlay-display-close");
+            overlay.classList.add("overlay-display-open");
+            side.classList.remove("container-close");
+            side.classList.add("container-open");
+            icon_nav_open.classList.remove("icon-nav-open");
+            icon_nav_open.classList.add("icon-nav-close");
+        } else {
+            side_bar.classList.remove("side-nav-open");
+            side_bar.classList.add("side-nav-close");
+            overlay.classList.remove("overlay-display-open");
+            overlay.classList.add("overlay-display-close");
+            side.classList.add("container-close");
+            side.classList.remove("container-open");
+            icon_nav_open.classList.add("icon-nav-open");
+            icon_nav_open.classList.remove("icon-nav-close");
+        }
+    });
+</script>
+
+</html>
